@@ -323,7 +323,7 @@ function App() {
             {[
               {
                 icon: "🐙",
-                url: "https://github.com/aryan-37",
+                url: "https://github.com/ExoticLure37",
                 label: "GitHub",
               },
               {
