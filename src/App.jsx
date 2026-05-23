@@ -738,7 +738,7 @@ function App() {
             Let's Synthesize Something
           </h2>
           <p className="text-slate-300 font-light max-w-lg mx-auto mb-8 text-base">
-            Looking for an elite AI Engineer, backend systems designer, or
+            Looking for a skilled AI Engineer, backend systems designer, or
             full-stack generalist? Let's talk metrics.
           </p>
 
@@ -754,8 +754,7 @@ function App() {
 
       {/* --- CLEAN FOOTER --- */}
       <footer className="py-12 border-t border-white/[0.05] text-center text-xs text-slate-500 font-mono tracking-wider">
-        &copy; {new Date().getFullYear()} Aryan Maurya • Constructed via React &
-        Framer Motion
+        &copy; {new Date().getFullYear()} Aryan Maurya • 2026
       </footer>
     </div>
   );
