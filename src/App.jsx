@@ -213,7 +213,7 @@ function App() {
         {/* --- NAV BUTTONS --- */}
         <div className="hidden md:flex items-center gap-4">
           <a
-            href="https://drive.google.com/file/d/1CQRgSSDW7ohNlryf98Om8z5rRZn2ndsk/view?usp=sharing"
+            href="https://drive.google.com/file/d/1tTybhxQcd36kd7ygIFn3BJul5jfnOM6E/view?usp=sharing"
             target="_blank"
             rel="noreferrer"
             className="px-4 py-2 rounded-xl border border-white/[0.15] text-slate-300 text-xs font-mono tracking-wider hover:bg-white/[0.04] hover:border-white/[0.3] hover:text-white transition"
