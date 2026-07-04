@@ -13,6 +13,11 @@ const TRANSACTIONS_DATA = {
       { label: "Transactions", value: "10K+" },
       { label: "Accuracy", value: "95.69%" },
     ],
+    coding: [
+      { platform: "CodeChef", achievement: "4 Star Coder", rating: "1816" },
+      { platform: "Codeforces", achievement: "Specialist", rating: "1405" },
+      { platform: "LeetCode", achievement: "Knight", rating: "" },
+    ],
   },
   skills: [
     { name: "AI/LLM", level: 85, techs: ["LangChain", "RAG Systems", "FAISS", "HuggingFace", "OpenRouter", "NLP"] },
@@ -315,6 +320,46 @@ function SystemDashboard({ theme }) {
                 : metric.value}
             </div>
           </div>
+        ))}
+      </div>
+    </section>
+  );
+}
+
+function CodingExpertise({ theme }) {
+  return (
+    <section className="px-6 lg:px-24 py-16 max-w-7xl mx-auto" style={{ borderTop: `1px solid ${themes[theme].border}` }}>
+      <h2 className="font-mono text-xs tracking-widest uppercase mb-8" style={{ color: themes[theme].secondary }}>
+        CODING EXPERTISE
+      </h2>
+
+      <div className="grid md:grid-cols-3 gap-6">
+        {TRANSACTIONS_DATA.profile.coding.map((platform, idx) => (
+          <motion.div
+            key={idx}
+            initial={{ opacity: 0, scale: 0.9 }}
+            whileInView={{ opacity: 1, scale: 1 }}
+            viewport={{ once: true }}
+            transition={{ delay: idx * 0.1 }}
+            className="rounded-xl p-6 backdrop-blur-sm text-center"
+            style={{
+              backgroundColor: themes[theme].card,
+              border: `1px solid ${themes[theme].border}`,
+            }}
+          >
+            <div className="text-3xl mb-3">⚔️</div>
+            <h3 className="text-lg font-bold mb-2" style={{ color: themes[theme].text }}>
+              {platform.platform}
+            </h3>
+            <div className="font-mono text-sm mb-2" style={{ color: themes[theme].secondary }}>
+              {platform.achievement}
+            </div>
+            {platform.rating && (
+              <div className="font-mono text-xs" style={{ color: themes[theme].muted }}>
+                Max Rating: {platform.rating}
+              </div>
+            )}
+          </motion.div>
         ))}
       </div>
     </section>
@@ -919,6 +964,7 @@ export default function App() {
           <Terminal theme={theme} />
           <SkillBars theme={theme} />
           <Education theme={theme} />
+          <CodingExpertise theme={theme} />
           <GitTimeline theme={theme} />
           <MissionLog theme={theme} />
           <MissionControl theme={theme} />
